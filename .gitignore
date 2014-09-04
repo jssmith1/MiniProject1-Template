@@ -1,2 +1,5 @@
 node_modules/
 bower_components/
+*.project
+.settings/org.eclipse.wst.common.project.facet.core.xml
+.settings/org.eclipse.wst.common.component
