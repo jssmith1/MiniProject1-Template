@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 		  },
 		  dist: {
 		    // the files to concatenate
-		    src: ['bower_components/d3.v3.min/index.js'],
+		    src: ['bower_components/d3.v3.min/index.js', 'bower_components/jquery/dist/jquery.js', 'bower_components/knockoutjs/dist/knockout.js'],
 		    // the location of the resulting JS file
 		    dest: 'www/js/libs.js'
 		  }

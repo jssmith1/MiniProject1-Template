@@ -36,15 +36,25 @@
 	</div>
 </div>
 
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12" id = "round">
+			<div class=" well">
+				<p data-bind="text: gearMode" class="text-info lead"></p>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
 			<form>
-				<label><input type="radio" name="mode" value="atc" checked>
+				<label><input type="radio" name="mode" value="atc" data-bind="checked: gearMode" checked>
 					accelerate-then-coast</label>
-				<label><input type="radio" name="mode" value="cubic"> cubic-in-out</label>
-				<label><input type="radio" name="mode" value="linear"> linear</label>
+				<label><input type="radio" name="mode" value="cubic" data-bind="checked: gearMode"> cubic-in-out</label>
+				<label><input type="radio" name="mode" value="linear" data-bind="checked: gearMode"> linear</label>
 			</form>
 			<script src="js/site.js"></script>
 		</div>
@@ -74,5 +84,12 @@
 		</div>
 	</div>
 </footer>
+
+<script>
+var myViewModel = {
+	gearMode: ko.observable("atc"),
+};
+ko.applyBindings(myViewModel);
+</script>
 
 </html>
