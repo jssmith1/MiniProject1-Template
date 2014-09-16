@@ -58,4 +58,5 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   grunt.registerTask('validate', ['jshint']);
   grunt.registerTask('package', ['concat', 'uglify']);
+  grunt.registerTask('build_all', ['jshint', 'concat', 'uglify']);
 };
