@@ -45,11 +45,17 @@ module.exports = function(grunt) {
 	  				ext: ".css"
 	        }]
 	      }
+	  },
+	  jshint:{
+		  files: ['www/js/site.js', 'Gruntfile.js']
+		  
 	  }
+	  
 	  
   });
 
   // This will automatically load any grunt plugin you install, such as grunt-contrib-less.
   require('load-grunt-tasks')(grunt);
+  grunt.registerTask('validate', ['jshint']);
   grunt.registerTask('package', ['concat', 'uglify']);
 };

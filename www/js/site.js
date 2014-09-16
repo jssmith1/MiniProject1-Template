@@ -19,7 +19,7 @@ gearBig.append("path")
 
 gearBig.append("path")
     .style("fill", "black")
-    .style("fill-opacity", .3)
+    .style("fill-opacity", 0.3)
     .attr("d", d3.svg.arc()({
       innerRadius: 20,
       outerRadius: height * 2 / 5 - 8,
@@ -39,7 +39,7 @@ gearSmall.append("path")
 
 gearSmall.append("path")
     .style("fill", "black")
-    .style("fill-opacity", .3)
+    .style("fill-opacity", 0.3)
     .attr("d", d3.svg.arc()({
       innerRadius: 20,
       outerRadius: height * 1 / 5 - 8,
@@ -50,7 +50,7 @@ gearSmall.append("path")
 var gear = svg.selectAll(".gear");
 
 d3.selectAll("input")
-    .data([ease = easeReflect(easeAccelerateThenCoast(1.5), .5), d3.ease("cubic-in-out"), d3.ease("linear")])
+    .data([ease = easeReflect(easeAccelerateThenCoast(1.5), 0.5), d3.ease("cubic-in-out"), d3.ease("linear")])
     .on("change", function(d) { ease = d; loop(); })
     .call(loop);
 
