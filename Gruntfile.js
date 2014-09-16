@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 		  },
 		  dist: {
 		    // the files to concatenate
-		    src: ['js/*.js'],
+		    src: ['bower_components/d3.v3.min/index.js'],
 		    // the location of the resulting JS file
 		    dest: 'www/js/libs.js'
 		  }
@@ -40,17 +40,16 @@ module.exports = function(grunt) {
 	        files: 
 	        [{
 	  				expand: true,
-	  				cwd: "bower_components/bootstrap/less",
-	  				src: "**/bootstrap.less",
+	  				src: ["local.less"],
 	  				dest: "www/css/",
 	  				ext: ".css"
 	        }]
 	      }
 	  }
-
+	  
   });
 
   // This will automatically load any grunt plugin you install, such as grunt-contrib-less.
   require('load-grunt-tasks')(grunt);
-  grunt.registerTask('package', ['concat', 'uglify'])
+  grunt.registerTask('package', ['concat', 'uglify']);
 };
